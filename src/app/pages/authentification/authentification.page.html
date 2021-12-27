@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title style="color:red; font-weight: bold; text-align: center;">Espace d'authentification</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <form #f="ngForm" (ngSubmit)="onLogin(f.value)">
+    <h3 style="color:green; font-weight: bold;">Accéder à votre cv :</h3>
+    <ion-item>
+     <ion-input type="text" name="id" placeholder="Identifiant" [(ngModel)]="id">
+     </ion-input>
+    </ion-item>
+    <ion-item>
+     <ion-input type="text" name="pass" placeholder="Mot de passe" ngModel></ion-input>
+    </ion-item>
+    <ion-button type="submit" expand="block">Connexion</ion-button>
+    <div class="ion-text-center" (click)="onGoSignUp()">
+      Nouvel Utilisateur
+     </div>
+     
+
+    </form>
+       
+</ion-content>
+
+
